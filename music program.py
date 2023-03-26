@@ -6,7 +6,7 @@ pygame.mixer.init()
 
 
 root = Tk()
-root.title("Music Player by[Ahmed Ramadan Abd Elnaser]")
+root.title(" Music Player ")
 root.geometry("500x430+400+100")
 root.resizable(0,0)
 root.attributes('-topmost', True)
