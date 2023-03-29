@@ -4,6 +4,7 @@ from tkinter import filedialog
 import os
 from tkinter import messagebox
 import os
+from pygame import mixer
 home_directory = os.path.expanduser( '~' )
 print( home_directory )
 
@@ -12,12 +13,12 @@ pygame.mixer.init()
 
 root = Tk()
 root.title("Music")
-root.geometry("500x430+400+100")
+root.geometry("500x430+550+200")
 root.resizable(0,0)
 root.attributes('-topmost', True)
 root.iconbitmap(f"c:\Program Files\music program\images\musical.ico")
 img=PhotoImage(file="c:\Program Files\music program\images\musical.png")
-Label(root,image=img,bg="white").place(x=0,y=0)
+Label(root,image=img,bg="black").place(x=0,y=0)
 Frame(root,bg="black",width=1000,height=100).place(x=0,y=360)
 
 
@@ -27,32 +28,36 @@ songs=[]
 current_song=""
 paused=False
 def load_music():
-    
-    global current_song
-    global name
-    global song
-    root.directory=filedialog.askdirectory()# to select folder only...
-    for song in os.listdir(root.directory):
+     global current_song
+     global name
+     global song
+     song_list.delete(0,"end")
+     root.directory=filedialog.askdirectory()# to select folder only...
+     for song in os.listdir(root.directory):
         name,ext=os.path.splitext(song)
         if ext==".mp3":
             songs.append(song)
-    for song in songs:
+     for song in songs:
         song_list.insert("end",song)
-    song_list.selection_set(0)
-    current_song=songs[song_list.curselection()[0]]
+     song_list.selection_set(0)
+     current_song=songs[song_list.curselection()[0]]
 Menubar=Menu(root)
 root.config(menu=Menubar)
 organise_menue=Menu(Menubar,tearoff=False)
 def develober():
     messagebox.showinfo("Ahmed Ramadan Abd Elnaser","Contact Me On\nAhmed-Ramadan-Abd-Elnaser@protonmail.com")
     
-Menubar.add_command(label="devoleped by",command=develober,font=('Technolog', 3, ' bold '))
-Menubar.add_command(label="Select Music Folder",background="black",command=load_music,font=('Technolog', 3, ' bold '))
+Menubar.add_command(label="Devoleped By",command=develober,font=('DS-DIGIB',18,"bold"))
+Menubar.add_command(label="Select Music Folder",background="black",command=load_music,font=('DS-DIGIB',18,"bold"))
 
 def delete():
     deleet=song_list.delete(0,END)
     return deleet
 
+def select():
+    select=song_list.get("anchor")
+    mixer.music.load(os.path.join(root.directory,select))
+    mixer.music.play()
 
 def play():
     global current_song
@@ -88,6 +93,9 @@ def loop_music():
 def no_loop():
     pygame.mixer.music.play(loops=0)
     play()
+    
+    
+
 
 play_music=PhotoImage(file="c:\Program Files\music program\images\play-buttton.png")
 pause_music=PhotoImage(file=f"c:\Program Files\music program\images\pause.png")
@@ -95,12 +103,25 @@ next_music=PhotoImage(file=f"c:\\Program Files\\music program\\images\\arrowhead
 prev_music=PhotoImage(file="c:\Program Files\music program\images\previous.png")
 
 
-play_button = Button(root, text="Play",image=play_music, command=play,activebackground="green",width=60,bd=0,height=0)
+play_button = Button(root, text="Play",image=play_music, command=select,activebackground="green",width=60,bd=0,height=0)
 stop_button = Button(root, text="Stop", image=pause_music,command=pause,pady=0,activebackground="red",width=60,bd=0)
 next_button =Button(root, text="Next", image=next_music,command=next,pady=0,activebackground="green",width=60,bd=0)
 prev_button = Button(root, text="Prev",image=prev_music ,command=prev,pady=0,activebackground="green",width=60,bd=0)
-song_list=Listbox(root,bg="white",fg="black",width=83,height=10,font="times,5")
-song_list.place(x=0,y=1)
+
+song_list=Listbox(root,bg="black",fg="green",width=36,height=5,font=('DS-DIGIB',18,"bold"))
+song_list.place(x=6,y=2)
+
+scrollbar = Scrollbar(root)
+  
+# Adding Scrollbar to the right
+# side of root window
+scrollbar.pack(side = RIGHT, fill = BOTH)
+
+song_list.config(yscrollcommand = scrollbar.set)
+scrollbar.config(command = song_list.yview)
+
+
+
 button_mode=True
 def loop():
     global button_mode
