@@ -3,11 +3,16 @@
 
 ### All BUTTONS TO BE CONTROLD
 
-![Screenshot 2023-03-26 000753](https://user-images.githubusercontent.com/90656786/227745692-3de85373-8408-4d22-80dc-32f8010f246d.png)
+![Screenshot 2023-04-16 181833](https://user-images.githubusercontent.com/90656786/232326238-93a0bc71-4e29-4034-9a13-bcc855505f09.png)
 
 
-# YOU HAVE THE APILITY TO CHOOSE YOU FILE LOCATION TO LISTEN YOUR MUSIC 🎶🎶🎶
-![Screenshot 2023-03-26 000812](https://user-images.githubusercontent.com/90656786/227745766-171ed314-22b6-443b-acbf-296af8c9bbfb.png)
+
+# HOME
+![Screenshot 2023-04-16 181929](https://user-images.githubusercontent.com/90656786/232326269-6cf6db30-d7b7-4935-b553-16927fa77243.png)
+
+![Screenshot 2023-04-16 181858](https://user-images.githubusercontent.com/90656786/232326282-e3f9540a-c4b0-4981-9c58-804d5310fb85.png)
+
+
 
 # FILE BROWSER 🚀🚀
 
