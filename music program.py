@@ -5,8 +5,9 @@ import os
 from tkinter import messagebox
 import os
 from pygame import mixer
-home_directory = os.path.expanduser( '~' )
-print( home_directory )
+import customtkinter
+
+
 
 pygame.mixer.init()
 
@@ -16,9 +17,9 @@ root.title("Music")
 root.geometry("500x430+550+200")
 root.resizable(0,0)
 root.attributes('-topmost', True)
-root.iconbitmap(f"c:\Program Files\music program\images\musical.ico")
-img=PhotoImage(file="c:\Program Files\music program\images\musical.png")
-Label(root,image=img,bg="black").place(x=0,y=0)
+root.iconbitmap(f"images\\musical.ico")
+img=PhotoImage(file="images\\musical.png")
+Label(root,image=img).place(x=0,y=0)
 Frame(root,bg="black",width=1000,height=100).place(x=0,y=360)
 
 
@@ -31,12 +32,14 @@ def load_music():
      global current_song
      global name
      global song
-     song_list.delete(0,"end")
+     song_list.delete(0,10000)
      root.directory=filedialog.askdirectory()# to select folder only...
      for song in os.listdir(root.directory):
         name,ext=os.path.splitext(song)
         if ext==".mp3":
             songs.append(song)
+        if song not in root.directory:
+            song_list.delete(0,10000)
      for song in songs:
         song_list.insert("end",song)
      song_list.selection_set(0)
@@ -97,19 +100,19 @@ def no_loop():
     
 
 
-play_music=PhotoImage(file="c:\Program Files\music program\images\play-buttton.png")
-pause_music=PhotoImage(file=f"c:\Program Files\music program\images\pause.png")
-next_music=PhotoImage(file=f"c:\\Program Files\\music program\\images\\arrowhead.png")
-prev_music=PhotoImage(file="c:\Program Files\music program\images\previous.png")
+play_music=PhotoImage(file="images\\play-buttton.png")
+pause_music=PhotoImage(file="images\\pause.png")
+next_music=PhotoImage(file="images\\next.png")
+prev_music=PhotoImage(file="images\\previous.png")
 
 
-play_button = Button(root, text="Play",image=play_music, command=select,activebackground="green",width=60,bd=0,height=0)
-stop_button = Button(root, text="Stop", image=pause_music,command=pause,pady=0,activebackground="red",width=60,bd=0)
-next_button =Button(root, text="Next", image=next_music,command=next,pady=0,activebackground="green",width=60,bd=0)
-prev_button = Button(root, text="Prev",image=prev_music ,command=prev,pady=0,activebackground="green",width=60,bd=0)
+play_button =customtkinter.CTkButton(root, text="Play",image=play_music, bg_color="black",command=select,width=60)
+stop_button = customtkinter.CTkButton(root, text="Stop", image=pause_music,bg_color="black",command=pause,width=60)
+next_button =customtkinter.CTkButton(root, text="Next", image=next_music,bg_color="black",command=next,width=60)
+prev_button = customtkinter.CTkButton(root, text="Prev",image=prev_music ,bg_color="black",command=prev,width=60)
 
-song_list=Listbox(root,bg="black",fg="green",width=36,height=5,font=('DS-DIGIB',18,"bold"))
-song_list.place(x=6,y=2)
+song_list=Listbox(root,bg="black",fg="green",width=20,height=20,font=('DS-DIGIB',10,"bold"))
+song_list.place(x=0,y=7)
 
 scrollbar = Scrollbar(root)
   
@@ -126,21 +129,21 @@ button_mode=True
 def loop():
     global button_mode
     if button_mode:
-        loop_button.config(image=loop_repeat,activebackground="green",bd=0)
-        loop_button.config(command=loop_music)
-        button_mode=False    
+        loop_button.configure(image=loop_repeat)
+        loop_button.configure(command=loop_music)
+        button_mode=False 
     else:
-        loop_button.config(image=repeat,activebackground="white",bd=0)
-        loop_button.config(command=no_loop)
+        loop_button.configure(image=repeat)
+        loop_button.configure(command=no_loop)
         button_mode=True
-repeat=PhotoImage(file="c:\\Program Files\\music program\\images\\repeat.png")
-loop_repeat=PhotoImage(file="c:\\Program Files\\music program\\images\\repeat-once.png")
-loop_button = Button(root,image=repeat,command=loop,bd=0)
-loop_button.place(x=430,y=370)
-play_button.place(x=170,y=368)
-stop_button.place(x=240,y=368)
-next_button.place(x=320,y=368)
-prev_button.place(x=90,y=368)
+repeat=PhotoImage(file="images\\loop.png")
+loop_repeat=PhotoImage(file="images\\loop-once.png")
+loop_button = customtkinter.CTkButton(root,text="",bg_color="black",image=repeat,command=loop,width=1)
+loop_button.place(x=430,y=367)
+play_button.place(x=140,y=368)
+stop_button.place(x=235,y=368)
+next_button.place(x=330,y=368)
+prev_button.place(x=45,y=368)
 
 root.mainloop()
 
