@@ -3,14 +3,18 @@
 
 ### All BUTTONS TO BE CONTROLD
 
-![Screenshot 2023-04-16 181833](https://user-images.githubusercontent.com/90656786/232326238-93a0bc71-4e29-4034-9a13-bcc855505f09.png)
 
+![Screenshot 2023-04-17 095241](https://user-images.githubusercontent.com/90656786/232427658-1d0c2ee7-bf52-4a45-bb25-50f38a6c670b.png)
 
 
 # HOME
-![Screenshot 2023-04-16 181929](https://user-images.githubusercontent.com/90656786/232326269-6cf6db30-d7b7-4935-b553-16927fa77243.png)
 
-![Screenshot 2023-04-16 181858](https://user-images.githubusercontent.com/90656786/232326282-e3f9540a-c4b0-4981-9c58-804d5310fb85.png)
+![Screenshot 2023-04-17 095424](https://user-images.githubusercontent.com/90656786/232427704-c1d4d8f9-4ce1-4130-80db-631ce7b64bd1.png)
+
+
+
+![Screenshot 2023-04-17 095310](https://user-images.githubusercontent.com/90656786/232427730-f48a3cb1-1744-48cd-ac73-e503131ea639.png)
+
 
 
 
