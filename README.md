@@ -9,12 +9,11 @@
 
 # HOME
 
-![Screenshot 2023-04-17 095424](https://user-images.githubusercontent.com/90656786/232427704-c1d4d8f9-4ce1-4130-80db-631ce7b64bd1.png)
-
-
-
 ![Screenshot 2023-04-17 095310](https://user-images.githubusercontent.com/90656786/232427730-f48a3cb1-1744-48cd-ac73-e503131ea639.png)
 
+
+
+![Screenshot 2023-04-17 095424](https://user-images.githubusercontent.com/90656786/232427704-c1d4d8f9-4ce1-4130-80db-631ce7b64bd1.png)
 
 
 
