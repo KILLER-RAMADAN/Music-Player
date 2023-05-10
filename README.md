@@ -3,20 +3,23 @@
 
 ### All BUTTONS TO BE CONTROLD
 
+![Screenshot 2023-05-10 195937](https://github.com/KILLER-RAMADAN/Music-Player/assets/90656786/443aeb19-e105-4910-97af-f03af196fbfd)
 
-![Screenshot 2023-04-17 095241](https://user-images.githubusercontent.com/90656786/232427658-1d0c2ee7-bf52-4a45-bb25-50f38a6c670b.png)
 
 
 # HOME
 
-![Screenshot 2023-04-17 095310](https://user-images.githubusercontent.com/90656786/232427730-f48a3cb1-1744-48cd-ac73-e503131ea639.png)
+![Screenshot 2023-05-10 200058](https://github.com/KILLER-RAMADAN/Music-Player/assets/90656786/df7333fe-5d68-47fa-bd85-69e2b440f6f7)
 
 
 
-![Screenshot 2023-04-17 095424](https://user-images.githubusercontent.com/90656786/232427704-c1d4d8f9-4ce1-4130-80db-631ce7b64bd1.png)
+
+![Screenshot 2023-05-10 200140](https://github.com/KILLER-RAMADAN/Music-Player/assets/90656786/a124d265-d3bf-48e0-b9f7-8d07d85e5e0d)
 
 
 
-# FILE BROWSER 🚀🚀
 
-![Screenshot 2023-03-26 000855](https://user-images.githubusercontent.com/90656786/227745784-f7c83382-98c0-41d9-b785-78d6a1e61881.png)
+# FILE BROWSER 
+
+![Screenshot 2023-05-10 200121](https://github.com/KILLER-RAMADAN/Music-Player/assets/90656786/5dad1020-d61b-4b5d-8e3e-3c015a8f1b90)
+
