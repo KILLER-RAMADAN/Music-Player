@@ -26,4 +26,8 @@
 
 ![Screenshot 2023-05-11 172447](https://github.com/KILLER-RAMADAN/Music-Player/assets/90656786/4fdce94c-5c6e-4b09-a557-567956acd2ec)
 
+# AHMED RAMADAN
+
+![GITHUP LINK-QR-CODE](https://github.com/KILLER-RAMADAN/Music-Player/assets/90656786/49507f56-7f14-4abc-b51e-7d566635caab)
+
 
