@@ -22,7 +22,7 @@
 
 
 
-# All Access To Download From Any Platform
+# Full Access To Download From Any Platform
 
 ![Screenshot 2023-05-14 231059](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/1a75e9f1-2dee-4f82-8987-30c44361b0dc)
 
