@@ -3,7 +3,7 @@
 
 ### All BUTTONS TO BE CONTROLD
 
-![Screenshot 2023-05-13 231841](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/0f86a2d9-19a7-471e-98ef-741ec36ac9ce)
+![Screenshot 2023-05-14 224049](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/6cfd9900-b639-45e3-9cf8-d9f1b5f0a73a)
 
 
 
@@ -11,13 +11,14 @@
 
 # [Download or Listen] You Have All Access Dont Worry About That.... 
 
-![Screenshot 2023-05-13 231646](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/350ac666-07ef-466b-a740-11184d0957a0)
+![Screenshot 2023-05-14 224326](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/945093f7-f967-4c3a-bf91-27e583e64b06)
 
+![Screenshot 2023-05-14 224156](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/800e1eb9-7d2f-4c6a-9d7b-a530d2535147)
 
 
 
 # Music Access
-![Screenshot 2023-05-13 231732](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/fdc23fd2-49c5-41d0-b56b-567cac678e75)
+![Screenshot 2023-05-14 224535](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/5d9a9448-933e-4083-be8b-6a2fe732d297)
 
 
 
