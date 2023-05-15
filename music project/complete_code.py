@@ -256,7 +256,7 @@ class MediaPlayer:
                                      background="white", activebackground="white")
         self.shuffle_button.place(x=10, y=595)
 
-        self.speaker_button = tk.Button(self.root, image=self.speaker_icon, command="command", cursor='hand2', bd=0,
+        self.speaker_button = tk.Button(self.root, image=self.speaker_icon, command=self.silent, cursor='hand2', bd=0,
                                      background="white", activebackground="white")
         self.speaker_button.place(x=395, y=595)
 
@@ -298,6 +298,7 @@ class MediaPlayer:
         self.scale_pause=False
         self.stop_download=False
         self.autoplay = False
+        self.silentt=False
 
         self.songs_to_play=[]
         # Functions #
@@ -425,7 +426,7 @@ class MediaPlayer:
 ###############
 ######
    # when you mpoved progress scale #
-    def progress_scale_moved(self,x):
+    def progress_scale_moved(self):
         self.root.after_cancel(self.updater)
         scale_at=self.progress_scale.get()
         song_name=self.songs_list.get('active')
@@ -534,18 +535,27 @@ class MediaPlayer:
 ###############
 ######        
    # volume #
-    def volume(self, p):
+    def volume(self,d):
         scale_at = self.vol_scale.get()/100
         pygame.mixer.music.set_volume(scale_at)
         if scale_at == 0:
             self.speaker_button.config(image=self.mute_icon)
         else:
             self.speaker_button.config(image=self.speaker_icon)
+    def silent(self):
+        if not self.silentt:
+         self.vol_scale.set(0)
+         self.speaker_button.config(image=self.mute_icon)
+         self.silentt=True
+        else:
+         self.vol_scale.set(1000)
+         self.speaker_button.config(image=self.speaker_icon)
+         self.silentt=False
    # volume #
 ###################
 ###############
 ######
-    def down_sound(self):
+    def down_sound(self,d):
         try:
           URLS =f'{self.get_link.get()}'
           info_dict = yt_dlp.YoutubeDL().extract_info(url=self.get_link.get(), download=False)
@@ -643,10 +653,8 @@ class MediaPlayer:
             playlist_opts = {
            'format': f'{"bestaudio/best[ext=mp3]"}',
            'outtmpl': f'{self.home_directory}//Desktop//{playlist_title}//{"%(title)s"}.mp3',
-           'preferredcodec': 'mp3',
-           'preferredquality': '192',
            'playlist': True,
-        #    'video-multistreams ':True,
+           'audio-multistreams ':True,
             }
                
 
