@@ -90,11 +90,11 @@ class MediaPlayer:
         self.shuffle_icon = ImageTk.PhotoImage(self.shuffle_icon)
 
         self.auto_play_icon = Image.open('images/auto_play.png')
-        self.auto_play_icon = self.auto_play_icon.resize((40, 50), Image.ANTIALIAS)
+        self.auto_play_icon = self.auto_play_icon.resize((60, 70), Image.ANTIALIAS)
         self.auto_play_icon = ImageTk.PhotoImage(self.auto_play_icon)
 
         self.auto_play_not_icon = Image.open('images/auto_play_not.png')
-        self.auto_play_not_icon = self.auto_play_not_icon.resize((40, 50), Image.ANTIALIAS)
+        self.auto_play_not_icon = self.auto_play_not_icon.resize((60, 70), Image.ANTIALIAS)
         self.auto_play_not_icon = ImageTk.PhotoImage(self.auto_play_not_icon)
         
         self.heading_icon=tk.PhotoImage(file='images/death.png')
@@ -266,7 +266,7 @@ class MediaPlayer:
 
         self.auto_play_button = tk.Button(self.root, image=self.auto_play_not_icon, command=self.auto_play_song, cursor='hand2', bd=0,
                                      background="white", activebackground="white")
-        self.auto_play_button.place(x=540, y=595)
+        self.auto_play_button.place(x=540, y=585)
     
 
         self.vol_scale = ttk.Scale(self.root, from_=0,to=100,orient="horizontal",style="TScale",command=self.volume,cursor="hand2")
@@ -369,16 +369,16 @@ class MediaPlayer:
             self.root.after_cancel(self.updater)
             self.play_button.config(image=self.play_icon)
             self.pause=True
-            self.scale_pause=True
-            self.status.config(text=f"Paused : {self.songs_list.get('active')} song: {self.songs_list.index('active')} of {self.songs_list.size()} songs")
+            # self.scale_pause=True 
+            self.status.config(text=f"Paused : {self.songs_list.get('active')}                                                    song: {self.songs_list.index('active')} of {self.songs_list.size()} songs")
             self.root.after_cancel(self.updater)
             pygame.mixer.music.pause()
-            self.scale_pause=True
+            # self.scale_pause=True
         else:
             self.pause=False
-            self.scale_pause=False
+            # self.scale_pause=False
             self.play_button.config(image=self.pause_icon)
-            self.status.config(text=f"Playing : {self.songs_list.get('active')} song: {self.songs_list.index('active')} of {self.songs_list.size()} songs")
+            self.status.config(text=f"Playing : {self.songs_list.get('active')}                                                   song: {self.songs_list.index('active')} of {self.songs_list.size()} songs")
             self.root.after_cancel(self.updater)
             pygame.mixer.music.unpause()
             self.scale_update()
@@ -391,7 +391,7 @@ class MediaPlayer:
         self.progress_scale['value'] = 0
         self.time_elapsed_label['text'] = "00:00:00"
         song_name = self.songs_list.get('active')
-        self.status.config(text=f"Playing : {song_name} Song: {self.songs_list.index('active')} of "
+        self.status.config(text=f"Playing : {song_name}                                                                          Song: {self.songs_list.index('active')} of "
                                 f"{self.songs_list.size()} songs")
         directory_path=os.path.join(songs)
         
@@ -399,7 +399,7 @@ class MediaPlayer:
         song_with_path = f'{directory_path}/{song_name}'
         music_data = MP3(song_with_path)
         self.music_length = int(music_data.info.length)
-        self.music_duration_label['text'] = f"- {time.strftime('%M:%S', time.gmtime(self.music_length))}"
+        self.music_duration_label['text']={time.strftime('%M:%S', time.gmtime(self.music_length))}
         # get song lenthe # 
         
         self.progress_scale['to'] = self.music_length
@@ -426,7 +426,7 @@ class MediaPlayer:
 ###############
 ######
    # when you mpoved progress scale #
-    def progress_scale_moved(self):
+    def progress_scale_moved(self,d):
         self.root.after_cancel(self.updater)
         scale_at=self.progress_scale.get()
         song_name=self.songs_list.get('active')
@@ -445,11 +445,17 @@ class MediaPlayer:
             self.time_elapsed_label['text']= time.strftime('%H:%M:%S', time.gmtime(self.progress_scale.get()))
             self.music_duration_label['text']= f"- {time.strftime('%H:%M:%S', time.gmtime(self.music_length-self.progress_scale.get() ))}"
             self.updater = self.root.after(1000, self.scale_update)
+            
+            
         elif self.repeat_condition:
             self.play_song()
+            
+            
 
         elif self.autoplay:
             self.next_song()
+            
+            
         else:
             self.progress_scale['value'] = 0
             self.time_elapsed_label['text'] = "00:00:00"
@@ -555,7 +561,7 @@ class MediaPlayer:
 ###################
 ###############
 ######
-    def down_sound(self,d):
+    def down_sound(self):
         try:
           URLS =f'{self.get_link.get()}'
           info_dict = yt_dlp.YoutubeDL().extract_info(url=self.get_link.get(), download=False)
@@ -584,6 +590,7 @@ class MediaPlayer:
                 'Below might be the causes\n->Unstable internet connection\n->Using Spotify Link\n->Invalid link\n->Invalid File Name\n->closing program')
           self.status.config(text=f"Error")
           self.get_link.delete(0,1000)
+          self.file_download_sound_button.config(state="normal")
     def thread(self):
         if self.get_link.get()=="":
          messagebox.showinfo("Error","Plaese Enter Music Link...")
@@ -607,7 +614,11 @@ class MediaPlayer:
              file = f"{video_info['title']}.mp4"
              options={
              'format':f'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
-             'video-multistreams ':True,
+            #  'video-multistreams ':True,
+             '--rm-cache-dir': True,
+             'html5': '1',
+             'c': 'TVHTML5',
+             'cver': '6.20180913',
              'outtmpl':f'{self.home_directory}//Desktop//Videos//{"%(title)s.%(ext)s"}'
              }
              with yt_dlp.YoutubeDL(options) as ydl:
@@ -621,6 +632,8 @@ class MediaPlayer:
                 'Below might be the causes\n->Unstable internet connection\n->Using Spotify Link\n->Invalid link\n->closing program')
               self.status.config(text=f"Error")
               self.get_video_link.delete(0,1000)
+              self.file_download_video_button.config(state="normal")
+              
     def thread2(self):
         if self.get_video_link.get()=="":
          messagebox.showinfo("Error","Plaese Enter Video Link...")
@@ -671,6 +684,7 @@ class MediaPlayer:
                 'Below might be the causes\n->Unstable internet connection\n->Invalid link\n->closing program')
              self.status.config(text=f"Error")
              self.get_playlist_link.delete(0,1000)
+             self.file_download_playlist_button.config(state="normal")
             
     def thread3(self):
         if self.get_playlist_link.get()=="":
