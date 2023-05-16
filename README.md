@@ -22,7 +22,6 @@
 
 
 # Music Access
-![Screenshot 2023-05-14 224535](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/5d9a9448-933e-4083-be8b-6a2fe732d297)
 ![Screenshot 2023-05-16 075033](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/d0f18fba-e6dd-4c99-af28-e21f21f49150)
 
 
