@@ -314,7 +314,7 @@ class MediaPlayer:
         songs = filedialog.askdirectory(title="Select Music Folder",initialdir=f"{self.home_directory}\\Desktop")
         for song in os.listdir(songs):
             name,ext=os.path.splitext(song)
-            if ext==".mp3" or ext==".webm" or ext==".m4a":
+            if ext==".mp3":
              self.directory_list.append(song.upper())
         for song in self.directory_list:
             self.songs_list.insert('end',song)
@@ -334,7 +334,7 @@ class MediaPlayer:
         songs = filedialog.askdirectory(initialdir=f"{self.home_directory}\\Desktop",title="Select Music Folder")
         for song in os.listdir(songs):
             name,ext=os.path.splitext(song)
-            if ext==".mp3" or ext==".webm" or ext==".m4a":
+            if ext==".mp3":
              self.directory_list.append(song.upper())
         for song in self.directory_list:
             self.songs_list.insert('end',song)
