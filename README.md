@@ -3,33 +3,29 @@
 
 ### All BUTTONS TO BE CONTROLD
 
-![Screenshot 2023-05-16 074825](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/97f933c9-123e-46a9-84a4-dad07d53cbd1)
+![Screenshot 2023-05-18 064526](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/4129f9be-6f00-45c1-85c8-a12ab4854353)
 
 
 
 
 
 
-# [Download or Listen] You Have All Access Dont Worry About That.... 
 
-![Screenshot 2023-05-14 224326](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/945093f7-f967-4c3a-bf91-27e583e64b06)
+# Download or Listen You Have All Access Dont Worry About That.... 
 
-![Screenshot 2023-05-14 224156](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/800e1eb9-7d2f-4c6a-9d7b-a530d2535147)
-
-![Screenshot 2023-05-16 074901](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/24f8e83b-0db8-4ea5-b203-878559898f8a)
+![Screenshot 2023-05-18 050549](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/5a23de85-5d06-4ee8-bdef-58fc71ee7db6)
 
 
+![Screenshot 2023-05-18 050515](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/a7ca48f0-6191-4fab-b9c4-5e8b1e93ca93)
 
 
-# Music Access
-![Screenshot 2023-05-16 075033](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/d0f18fba-e6dd-4c99-af28-e21f21f49150)
-
-
+![Screenshot 2023-05-18 064301](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/8291983d-0de0-4c0d-86c1-daa277b342de)
 
 
 # Full Access To Download From Any Platform
 
-![Screenshot 2023-05-14 231059](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/1a75e9f1-2dee-4f82-8987-30c44361b0dc)
+![Screenshot 2023-05-18 050549](https://github.com/KILLER-RAMADAN/Music-Player-With-Full-Access-Downloader/assets/90656786/d3bebb93-9f48-4c77-811c-b21bf334286f)
+
 
 
 
